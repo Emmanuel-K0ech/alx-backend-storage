@@ -1,0 +1,2 @@
+// Finding a particular key:value pair name:'Holberton School'
+db.school.find({name:"Holberton school"})
