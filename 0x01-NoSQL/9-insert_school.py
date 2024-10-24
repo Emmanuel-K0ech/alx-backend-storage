@@ -11,6 +11,6 @@ def insert_school(mongo_collection, **kwargs):
         **kwargs: unlimited list of documents to be added
     Return: the new '_id'
     """
-    for key, value in kwargs.items():
-        _id = mongo_collection.insert_one({key: value})
-    return _id
+    document = kwargs
+    result = mongo_collection.insert_one(document)
+    return result.inserted_id
